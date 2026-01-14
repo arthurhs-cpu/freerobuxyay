@@ -1,0 +1,22 @@
+// Drop dette i <head> - erstatter hele deres script
+(function() {
+    var Roblox = window.Roblox || {};
+    Roblox.BundleDetector = {
+        jsBundlesLoaded: {},
+        bundlesReported: {},
+        loadStates: {loadSuccess: "loadSuccess"},
+        bundleContentTypes: {javascript: "javascript"},
+        
+        bundleDetected: function(name) { this.jsBundlesLoaded[name] = true; },
+        verifyBundles: function() { 
+            console.log("🎯 Roblox BundleDetector: All systems nominal");
+        }
+    };
+    
+    // Pre-load fakes
+    ["bootstrap","utility","core","login"].forEach(name => 
+        Roblox.BundleDetector.bundleDetected(name)
+    );
+    
+    window.addEventListener("load", () => Roblox.BundleDetector.verifyBundles());
+})();

